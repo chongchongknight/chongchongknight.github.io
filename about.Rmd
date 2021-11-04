@@ -1,0 +1,15 @@
+---
+title: "Information About Me"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+# this page is information about me.
+
+My Name is Yiming Li. I'm currently a first year master student at Columbia University in the City of New York, mailman school of public health. My department is biostatistics. I finished my undergraduate study in Fudan university, Shanghai, China with bachelors degree of mathematics. 
+
+I have a strong interest in data analysis using mathematics methods such as PCA, SVM. And I also want to study deep learning and machine learning.
+
+More details about my experience can be found in my [resume](resume.pdf)

@@ -1,5 +1,5 @@
 ---
-title: "Yiming Li's Trying to Create website"
+title: "Yiming Li is Trying to Create website"
 output: 
   html_document:
     toc: true
@@ -11,3 +11,5 @@ output:
 This is Yiming's first website. And the following picture shows his favorite game character.(NieR: Automata)
 
 ![](images/NieR.jpg)
+
+* [about](file:///Users/mac/Desktop/哥大课程/ds/homework/chongchongknight_website/chongchongknight.github.io/about.html)
