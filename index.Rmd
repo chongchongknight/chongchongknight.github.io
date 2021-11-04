@@ -12,4 +12,22 @@ This is Yiming's first website. And the following picture shows his favorite gam
 
 ![](images/NieR.jpg)
 
-* [about](file:///Users/mac/Desktop/哥大课程/ds/homework/chongchongknight_website/chongchongknight.github.io/about.html)
+## instruction
+This website mainly includes Yiming's personal information and his github address. You can find personal information about Yiming by clicking following "about me" button or "about me" button on the top right of the website. 
+
+If you want to contact him, you can click "letter" button on the top right of the website to email him or you can find his phone and address at the end of website.
+
+If you want to check his github, you can click the "cat" button on the top right of the website. 
+
+* [about me](file:///Users/mac/Desktop/哥大课程/ds/homework/chongchongknight_website/chongchongknight.github.io/about.html)
+
+
+
+
+
+<h1 style="text-align:right">Contact Me</h1>
+<p align="right" >Yiming LI</p>
+<p align="right" >917-294-9193</p>
+<p align="right" >!00 Haven Ave, NY</p>
+<p align="right" >NY, 10032</p>
+<p align="right" >Email: yl4925@cumc.columbia.edu</p>
