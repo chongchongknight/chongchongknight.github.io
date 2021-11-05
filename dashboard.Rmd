@@ -9,29 +9,82 @@ output:
 
 ```{r setup, include=FALSE}
 library(flexdashboard)
+library(tidyverse)
+library(p8105.datasets)
+library(plotly)
+data("instacart")
 ```
+
+```{r}
+popular20_aisle = instacart %>% 
+  group_by(aisle) %>% 
+  summarise(count = n()) %>% 
+  arrange(-count) %>% 
+  top_n(20) %>% 
+  mutate(rank = 1:20,
+         text_label = str_c(aisle, " is No.", rank, " popular aisle with ", count, " orders"))
+```
+
+
+```{r}
+order_count = instacart %>% 
+  group_by(user_id) %>% 
+  summarise(count = n()) %>% 
+  filter(count > 30)
+
+order_more30_id = order_count %>% 
+  pull(user_id)
+
+days_since_prior_order = instacart %>% 
+  filter(user_id %in% order_more30_id) %>% 
+  select(user_id, days_since_prior_order) %>% 
+  mutate(days_since_prior_order = str_c(days_since_prior_order, " day(s)"))
+
+days_since_prior_order = days_since_prior_order[!duplicated(days_since_prior_order[,1]),]
+
+shop_interval_VS_order_count = left_join(order_count, days_since_prior_order)
+
+
+```
+
+```{r}
+aisles = popular20_aisle %>% 
+  pull(aisle)
+instacart %>% 
+  filter(aisle %in% aisles, order_number > 30)
+```
+
 
 Column {data-width=650}
 -----------------------------------------------------------------------
 
-### Chart A
+### The 20 most popular aisle 
 
 ```{r}
-
+popular20_aisle %>% 
+  mutate(aisle = fct_reorder(aisle, -count)) %>% 
+  plot_ly(x = ~aisle, y = ~count, type = "bar", text = ~text_label,
+          color = ~aisle, colors = "viridis")
 ```
 
 Column {data-width=350}
 -----------------------------------------------------------------------
 
-### Chart B
+### Shopping interval for the 20 most popular aisle
 
 ```{r}
-
+instacart %>% 
+  filter(aisle %in% aisles, order_number > 10) %>% 
+  mutate(aisle = fct_reorder(aisle, days_since_prior_order)) %>% 
+  plot_ly(y = ~days_since_prior_order, color = ~aisle, type = "box",  colors = "viridis") 
 ```
 
-### Chart C
+### relationship between days since prior order and number of one-time purchases for those 
 
 ```{r}
+shop_interval_VS_order_count %>% 
+  mutate(days_since_prior_order = fct_reorder(days_since_prior_order, count)) %>% 
+  plot_ly(y = ~count, color = ~days_since_prior_order, type = "box",  colors = "viridis")
 
 ```
 
