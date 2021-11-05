@@ -37,25 +37,34 @@ order_more30_id = order_count %>%
 
 days_since_prior_order = instacart %>% 
   filter(user_id %in% order_more30_id) %>% 
-  select(user_id, days_since_prior_order) %>% 
-  mutate(days_since_prior_order = str_c(days_since_prior_order, " day(s)"))
+  select(user_id, days_since_prior_order) 
 
 days_since_prior_order = days_since_prior_order[!duplicated(days_since_prior_order[,1]),]
 
-shop_interval_VS_order_count = left_join(order_count, days_since_prior_order)
+shop_interval_VS_order_count = left_join(order_count, days_since_prior_order) %>% 
+  mutate(days_since_prior_order = str_c(days_since_prior_order, " day(s)"))
+```
 
 
+```{r}
+interval_VS_count_mean_median = left_join(order_count, days_since_prior_order) %>% 
+  group_by(days_since_prior_order) %>% 
+  summarise(mean = mean(count),
+            median = median(count)) %>% 
+  pivot_longer(
+    mean:median, 
+    names_to = "measure_type",
+    values_to = "statistics"
+  )
 ```
 
 ```{r}
 aisles = popular20_aisle %>% 
   pull(aisle)
-instacart %>% 
-  filter(aisle %in% aisles, order_number > 30)
 ```
 
 
-Column {data-width=650}
+Column {data-width=500}
 -----------------------------------------------------------------------
 
 ### The 20 most popular aisle 
@@ -67,10 +76,7 @@ popular20_aisle %>%
           color = ~aisle, colors = "viridis")
 ```
 
-Column {data-width=350}
------------------------------------------------------------------------
-
-### Shopping interval for the 20 most popular aisle
+### Shopping interval for the 20 most popular aisle for those who have use instacart for more than 10 times
 
 ```{r}
 instacart %>% 
@@ -79,7 +85,10 @@ instacart %>%
   plot_ly(y = ~days_since_prior_order, color = ~aisle, type = "box",  colors = "viridis") 
 ```
 
-### relationship between days since prior order and number of one-time purchases for those 
+Column {data-width=500}
+-----------------------------------------------------------------------
+
+### Relationship between days since prior order and number of one-time purchases for those purchase more than 30 items in one order
 
 ```{r}
 shop_interval_VS_order_count %>% 
@@ -87,4 +96,13 @@ shop_interval_VS_order_count %>%
   plot_ly(y = ~count, color = ~days_since_prior_order, type = "box",  colors = "viridis")
 
 ```
+
+### Relationship between days since prior order and number of one-time purchases for those purchase more than 30 items in one order
+
+```{r}
+interval_VS_count_mean_median %>% 
+  ggplot(aes(x = days_since_prior_order, y = statistics, color = measure_type)) +
+  geom_point() +
+  geom_smooth(se = FALSE)
+``` 
 
