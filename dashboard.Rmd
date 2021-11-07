@@ -96,7 +96,7 @@ instacart %>%
 Time & Count
 =======================================================================
 
-Column {data-width=500}
+Column {data-width=600}
 -----------------------------------------------------------------------
 
 ### Relationship between days since prior order and number of one-time purchases for those purchase more than 30 items in one order
@@ -110,7 +110,7 @@ shop_interval_VS_order_count %>%
 ```
 
 
-Column {data-width=500}
+Column {data-width=400}
 -----------------------------------------------------------------------
 ### Relationship between days since prior order and number of one-time purchases for those purchase more than 30 items in one order
 
