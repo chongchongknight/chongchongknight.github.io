@@ -1,0 +1,27 @@
+---
+title: "Information About Me"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+# Instacart 
+In this section, Yiming is trying to analyse instacart shopping data. If you want to see plots carefully, you can click the "dashboard" button on the top left of website. 
+
+## The 20 most popular aisles in instacart
+![](images/newplot.png)
+This plot shows the 20 most popular aisles in instacart. I mainly measure popularity through number of aisle purchased in specific time period.
+
+## Shopping interval for the 20 most popular aisles in instacart
+![](images/newplot-2.png)
+Since we already know the 20 most popular aisles in instacart, we also want to know how long would the shopping time interval be for these 20 aisles. In this case, we only choose those who have made more than 10 orders in instacart. In general, we find that counts of aisles show their popularity, while shopping time intervals of aisles tend to show "Shelf Life"(fresh ones have smaller interval while frozen ones have bigger interval). However, we need more evidence to prove our point.
+
+## Shopping interval and number of one-time purchases
+![](images/newplot-3.png)
+
+In this section, we want to know whether there is association between shopping time interval and number of one-time purchase. (According to common sense, the more items you buy at once, the longer the time between purchases should be).
+
+In this case, we only choose those who purchase more than 30 items at a time. Actually if variable days since prior order could be double, it would be more convenient to see association. However, variable days since prior order is int variable in our dataframe. So we take time interval as categorical variable, and we use boxplot to show distribution of items number of one-time purchases with respect to specific shopping time interval.
+![](images/newplot-4.png)
+It is more convenient to get association from the smooth line. In fact, the number of purchases fluctuates as the time interval increases.

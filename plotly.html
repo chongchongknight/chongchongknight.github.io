@@ -11,7 +11,7 @@
 
 
 
-<title>Yiming Li is Trying to Create Website</title>
+<title>Information About Me</title>
 
 <script src="site_libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
@@ -348,43 +348,28 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Yiming Li is Trying to Create Website</h1>
+<h1 class="title toc-ignore">Information About Me</h1>
 
 </div>
 
 
-<div id="congratulation" class="section level1">
-<h1>Congratulation !!!</h1>
-<p>This is Yiming’s first website. And the following picture shows his favorite game character.(NieR: Automata)</p>
-<p><img src="images/NieR.jpg" /></p>
-</div>
-<div id="instruction" class="section level1">
-<h1>Instruction</h1>
-<p>This website mainly includes Yiming’s personal information and his github address. You can find personal information about Yiming by clicking following “<a href="https://chongchongknight.github.io/about.html">about me</a>” button or “About” button on the top right of the website.</p>
-<p>If you want to contact me, you can click “envelope” button on the top right of the website to email me or you can find my phone and address at the end of website.</p>
-<p>If you want to check my github, you can click the “cat” button on the top right of the website.</p>
-</div>
 <div id="instacart" class="section level1">
 <h1>Instacart</h1>
-<p>In this section, Yiming is trying to analyse instacart shopping data. If you want to see plots carefully, you can click the “dashboard” button on the top left of website. If you want to see analysis, please click <a href="https://chongchongknight.github.io/plotly.html">here</a></p>
-<h1 style="text-align:right">
-Contact Me
-</h1>
-<p align="right">
-Yiming LI
-</p>
-<p align="right">
-917-294-9193
-</p>
-<p align="right">
-100 Haven Ave, NY
-</p>
-<p align="right">
-NY, 10032
-</p>
-<p align="right">
-Email: <a href="mailto:yl4925@cumc.columbia.edu" class="email">yl4925@cumc.columbia.edu</a>
-</p>
+<p>In this section, Yiming is trying to analyse instacart shopping data. If you want to see plots carefully, you can click the “dashboard” button on the top left of website.</p>
+<div id="the-20-most-popular-aisles-in-instacart" class="section level2">
+<h2>The 20 most popular aisles in instacart</h2>
+<p><img src="images/newplot.png" /> This plot shows the 20 most popular aisles in instacart. I mainly measure popularity through number of aisle purchased in specific time period.</p>
+</div>
+<div id="shopping-interval-for-the-20-most-popular-aisles-in-instacart" class="section level2">
+<h2>Shopping interval for the 20 most popular aisles in instacart</h2>
+<p><img src="images/newplot-2.png" /> Since we already know the 20 most popular aisles in instacart, we also want to know how long would the shopping time interval be for these 20 aisles. In this case, we only choose those who have made more than 10 orders in instacart. In general, we find that counts of aisles show their popularity, while shopping time intervals of aisles tend to show “Shelf Life”(fresh ones have smaller interval while frozen ones have bigger interval). However, we need more evidence to prove our point.</p>
+</div>
+<div id="shopping-interval-and-number-of-one-time-purchases" class="section level2">
+<h2>Shopping interval and number of one-time purchases</h2>
+<p><img src="images/newplot-3.png" /></p>
+<p>In this section, we want to know whether there is association between shopping time interval and number of one-time purchase. (According to common sense, the more items you buy at once, the longer the time between purchases should be).</p>
+<p>In this case, we only choose those who purchase more than 30 items at a time. Actually if variable days since prior order could be double, it would be more convenient to see association. However, variable days since prior order is int variable in our dataframe. So we take time interval as categorical variable, and we use boxplot to show distribution of items number of one-time purchases with respect to specific shopping time interval. <img src="images/newplot-4.png" /> It is more convenient to get association from the smooth line. In fact, the number of purchases fluctuates as the time interval increases.</p>
+</div>
 </div>
 
 
