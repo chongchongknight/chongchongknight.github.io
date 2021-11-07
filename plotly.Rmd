@@ -24,4 +24,5 @@ In this section, we want to know whether there is association between shopping t
 
 In this part, we only select those who have accumulated more than thirty purchases. Actually if variable "days since prior order" could be dbl, it would be more convenient to see association (sinc we could use scatter plot). However, variable "days since prior order" is int variable in our dataframe. So we take time interval as categorical variable, and we use boxplot to show distribution of items number of one-time purchases with respect to specific shopping time interval.
 ![](images/newplot-4.png)
+
 We can also calculate and graph the mean and median number of purchases at a fixed time interval. It is more convenient to get association from the smooth line. In fact, the number of purchases fluctuates as the time interval increases.
