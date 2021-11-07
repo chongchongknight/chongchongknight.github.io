@@ -21,7 +21,7 @@ If you want to check my github, you can click the "cat" button on the top right 
 
 
 # Instacart 
-In this section, Yiming is trying to analyse instacart shopping data. If you want to see plots carefully, you can click the "dashboard" button on the top left of website. If you want to see analysis, please click [here](https://chongchongknight.github.io/plotly.html)
+In this section, Yiming is trying to analyse instacart shopping data. If you want to see plots carefully, you can click the "Dashboard" button on the top left of website. If you want to see analysis, please click [here](https://chongchongknight.github.io/plotly.html)
 
 
 
