@@ -13,7 +13,7 @@ This is Yiming's first website. And the following picture shows his favorite gam
 ![](images/NieR.jpg)
 
 # Instruction
-This website mainly includes Yiming's personal information and his github address. You can find personal information about Yiming by clicking following "[about me](https://chongchongknight.github.io/about.html)" button or "About" button on the top right of the website. 
+This website mainly includes Yiming's personal information and his github address. You can find personal information about Yiming by clicking [here](https://chongchongknight.github.io/about.html) button or "About" button on the top right of the website. 
 
 If you want to contact me, you can click "envelope" button on the top right of the website to email me or you can find my phone and address at the end of website.
 
@@ -21,7 +21,7 @@ If you want to check my github, you can click the "cat" button on the top right 
 
 
 # Instacart 
-In this section, Yiming is trying to analyse instacart shopping data. If you want to see plots carefully, you can click the "Dashboard" button on the top left of website. If you want to see analysis, please click [here](https://chongchongknight.github.io/plotly.html)
+In this section, Yiming is trying to analyze instacart shopping data. If you want to see plots carefully, you can click the "Dashboard" button on the top left of website. If you want to see analysis, please click [here](https://chongchongknight.github.io/plotly.html)
 
 
 
