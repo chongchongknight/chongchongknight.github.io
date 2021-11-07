@@ -56,7 +56,7 @@ interval_VS_count_mean_median = left_join(order_count, days_since_prior_order) %
   pivot_longer(
     mean:median, 
     names_to = "measure_type",
-    values_to = "statistics"
+    values_to = "purchase_number_statistics"
   )
 ```
 
@@ -118,7 +118,7 @@ Column {data-width=400}
 
 ```{r}
 plot = interval_VS_count_mean_median %>% 
-  ggplot(aes(x = days_since_prior_order, y = statistics, color = measure_type)) +
+  ggplot(aes(x = days_since_prior_order, y = purchase_number_statistics, color = measure_type)) +
   geom_point() +
   geom_smooth(se = FALSE)
 ggplotly(plot)

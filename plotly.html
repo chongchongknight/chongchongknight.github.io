@@ -11,7 +11,7 @@
 
 
 
-<title>Information About Me</title>
+<title>Analysis for Instacart Shopping Data</title>
 
 <script src="site_libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
@@ -348,7 +348,7 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Information About Me</h1>
+<h1 class="title toc-ignore">Analysis for Instacart Shopping Data</h1>
 
 </div>
 
@@ -362,13 +362,13 @@ div.tocify {
 </div>
 <div id="shopping-interval-for-the-20-most-popular-aisles-in-instacart" class="section level2">
 <h2>Shopping interval for the 20 most popular aisles in instacart</h2>
-<p><img src="images/newplot-2.png" /> Since we already know the 20 most popular aisles in instacart, we also want to know how long would the shopping time interval be for these 20 aisles. In this case, we only choose those who have made more than 10 orders in instacart. In general, we find that counts of aisles show their popularity, while shopping time intervals of aisles tend to show “Shelf Life”(fresh ones have smaller interval while frozen ones have bigger interval). However, we need more evidence to prove our point.</p>
+<p><img src="images/newplot-2.png" /> Since we already know the 20 most popular aisles in instacart, we also want to know how long would the shopping time interval be for these 20 aisles. In this part, we only select users who have made more than ten purchases on instacart. In general, we find that counts of aisles show their popularity, while shopping time intervals of aisles may show “Shelf Life”(fresh ones have smaller interval while frozen ones have bigger interval). However, we need more evidence to prove our point.</p>
 </div>
 <div id="shopping-interval-and-number-of-one-time-purchases" class="section level2">
 <h2>Shopping interval and number of one-time purchases</h2>
 <p><img src="images/newplot-3.png" /></p>
 <p>In this section, we want to know whether there is association between shopping time interval and number of one-time purchase. (According to common sense, the more items you buy at once, the longer the time between purchases should be).</p>
-<p>In this case, we only choose those who purchase more than 30 items at a time. Actually if variable days since prior order could be double, it would be more convenient to see association. However, variable days since prior order is int variable in our dataframe. So we take time interval as categorical variable, and we use boxplot to show distribution of items number of one-time purchases with respect to specific shopping time interval. <img src="images/newplot-4.png" /> It is more convenient to get association from the smooth line. In fact, the number of purchases fluctuates as the time interval increases.</p>
+<p>In this part, we only select those who have accumulated more than thirty purchases. Actually if variable “days since prior order” could be dbl, it would be more convenient to see association (sinc we could use scatter plot). However, variable “days since prior order” is int variable in our dataframe. So we take time interval as categorical variable, and we use boxplot to show distribution of items number of one-time purchases with respect to specific shopping time interval. <img src="images/newplot-4.png" /> We can also calculate and graph the mean and median number of purchases at a fixed time interval. It is more convenient to get association from the smooth line. In fact, the number of purchases fluctuates as the time interval increases.</p>
 </div>
 </div>
 
