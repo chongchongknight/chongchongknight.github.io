@@ -13,9 +13,9 @@ This is Yiming's first website. And the following picture shows his favorite gam
 ![](images/NieR.jpg)
 
 # Instruction
-This website mainly includes Yiming's personal information and his github address. You can find personal information about Yiming by clicking following "[about me](https://chongchongknight.github.io/about.html)" button or "about me" button on the top right of the website. 
+This website mainly includes Yiming's personal information and his github address. You can find personal information about Yiming by clicking following "[about me](https://chongchongknight.github.io/about.html)" button or "About" button on the top right of the website. 
 
-If you want to contact me, you can click "letter" button on the top right of the website to email me or you can find my phone and address at the end of website.
+If you want to contact me, you can click "envelope" button on the top right of the website to email me or you can find my phone and address at the end of website.
 
 If you want to check my github, you can click the "cat" button on the top right of the website. 
 
