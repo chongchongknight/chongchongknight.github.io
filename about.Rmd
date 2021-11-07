@@ -8,7 +8,7 @@ output:
 
 # this page is information about me.
 
-My Name is Yiming Li. I'm currently a first year master student at Columbia University in the City of New York, mailman school of public health. My department is biostatistics. I finished my undergraduate study in Fudan university, Shanghai, China with bachelors degree of mathematics. 
+My Name is Yiming Li. I'm currently a first year master student at [Columbia University in the City of New York](https://www.columbia.edu/), mailman school of public health. My department is biostatistics. I finished my undergraduate study in [Fudan university](https://www.fudan.edu.cn/en/), Shanghai, China with bachelors degree of mathematics. 
 
 I have a strong interest in data analysis using mathematics methods such as PCA, SVM. And I also want to study deep learning and machine learning.
 
