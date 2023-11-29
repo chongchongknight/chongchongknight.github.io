@@ -1,18 +1,15 @@
 ---
-title: "Yiming Li is Trying to Create Website"
+title: "Congratulation! Yiming's Website!"
 output: 
   html_document:
     toc: true
     toc_float: true
 ---
 
-# Congratulation !!! 
 
-This is Yiming's first website. And the following picture shows his favorite game character.(NieR: Automata)
+This is Yiming's website. And the following picture shows his favorite game character.(NieR: Automata)
 
 ![](images/NieR.jpg)
-
-# Instruction
 This website mainly includes Yiming's personal information and his github address. You can find personal information about Yiming by clicking [here](https://chongchongknight.github.io/about.html) or "About" button on the top right of the website. 
 
 If you want to contact me, you can click "envelope" button on the top right of the website to email me or you can find my phone and address at the end of website.
@@ -20,14 +17,29 @@ If you want to contact me, you can click "envelope" button on the top right of t
 If you want to check my github, you can click the "cat" button on the top right of the website. 
 
 
-# Instacart 
-In this section, Yiming is trying to analyze instacart shopping data. If you want to see plots carefully, you can click the "Dashboard" button on the top left of website. If you want to see analysis, please click [here](https://chongchongknight.github.io/plotly.html)
+# About me
+My Name is Yiming Li. I receive my master degree at at [Columbia University in the City of New York](https://www.columbia.edu/), mailman school of public health from the department of biostatistics. I finished my undergraduate study in [Fudan university](https://www.fudan.edu.cn/en/), Shanghai, China with bachelors degree of mathematics. 
+
+# Research Interest and Projects
+My interest is **high dimension analysis** and **large-scale analysis**. Currently, I am working on the following projects:
+
+*[A Spatially Adaptive Edge-Preserving Denoising Method](https://ieeexplore.ieee.org/document/9187417)
+
+I hope to submit the following papers on arXiv after finalizing , but you can click to see the current version:
+
+*[A Double Projection Approach for Safe and Efficient Semi-Supervised Data-Fusion](SS_data_fusion.pdf)
+
+*[Genetics- Learning Conditional Density with high-dimensional covariates](distrbution_learning.pdf) and its [slide](distribution_learning_ppt.pdf)
+
+*[A Adaptive Linear Programming For Quantile Regression With Shared Design](LP__Copy.pdf)
+
+*[A neural network approach for large-scale imputation for data with informative missingness by minimizing re-calibrated Wasserstein distance](DL_QR_for_all.pdf)
 
 
 
 <h1 style="text-align:right">Contact Me</h1>
 <p align="right" >Yiming LI</p>
 <p align="right" >917-294-9193</p>
-<p align="right" >100 Haven Ave, NY</p>
-<p align="right" >NY, 10032</p>
+<p align="right" >2022 Central Rd, NJ</p>
+<p align="right" >NJ, 07024</p>
 <p align="right" >Email: yl4925@cumc.columbia.edu</p>

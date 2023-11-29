@@ -11,10 +11,10 @@
 
 
 
-<title>Yiming Li is Trying to Create Website</title>
+<title>Congratulation! Yiming’s Website!</title>
 
-<script src="site_libs/header-attrs-2.10/header-attrs.js"></script>
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.17/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cerulean.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -65,6 +65,7 @@ if (window.hljs) {
 
 
 
+
 <style type = "text/css">
 .main-container {
   max-width: 940px;
@@ -85,6 +86,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -142,11 +146,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -175,8 +183,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -184,16 +192,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -310,7 +311,7 @@ div.tocify {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -319,9 +320,7 @@ div.tocify {
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-        <li>
-  <a href="dashboard.html">Dashboard</a>
-</li>
+        
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
@@ -348,25 +347,28 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Yiming Li is Trying to Create Website</h1>
+<h1 class="title toc-ignore">Congratulation! Yiming’s Website!</h1>
 
 </div>
 
 
-<div id="congratulation" class="section level1">
-<h1>Congratulation !!!</h1>
-<p>This is Yiming’s first website. And the following picture shows his favorite game character.(NieR: Automata)</p>
-<p><img src="images/NieR.jpg" /></p>
-</div>
-<div id="instruction" class="section level1">
-<h1>Instruction</h1>
-<p>This website mainly includes Yiming’s personal information and his github address. You can find personal information about Yiming by clicking <a href="https://chongchongknight.github.io/about.html">here</a> or “About” button on the top right of the website.</p>
+<p>This is Yiming’s website. And the following picture shows his favorite game character.(NieR: Automata)</p>
+<p><img src="images/NieR.jpg" /> This website mainly includes Yiming’s personal information and his github address. You can find personal information about Yiming by clicking <a href="https://chongchongknight.github.io/about.html">here</a> or “About” button on the top right of the website.</p>
 <p>If you want to contact me, you can click “envelope” button on the top right of the website to email me or you can find my phone and address at the end of website.</p>
 <p>If you want to check my github, you can click the “cat” button on the top right of the website.</p>
+<div id="about-me" class="section level1">
+<h1>About me</h1>
+<p>My Name is Yiming Li. I receive my master degree at at <a href="https://www.columbia.edu/">Columbia University in the City of New York</a>, mailman school of public health from the department of biostatistics. I finished my undergraduate study in <a href="https://www.fudan.edu.cn/en/">Fudan university</a>, Shanghai, China with bachelors degree of mathematics.</p>
 </div>
-<div id="instacart" class="section level1">
-<h1>Instacart</h1>
-<p>In this section, Yiming is trying to analyze instacart shopping data. If you want to see plots carefully, you can click the “Dashboard” button on the top left of website. If you want to see analysis, please click <a href="https://chongchongknight.github.io/plotly.html">here</a></p>
+<div id="research-interest-and-projects" class="section level1">
+<h1>Research Interest and Projects</h1>
+<p>My interest is <strong>high dimension analysis</strong> and <strong>large-scale analysis</strong>. Currently, I am working on the following projects:</p>
+<p>*<a href="https://ieeexplore.ieee.org/document/9187417">A Spatially Adaptive Edge-Preserving Denoising Method</a></p>
+<p>I hope to submit the following papers on arXiv after finalizing , but you can click to see the current version:</p>
+<p>*<a href="SS_data_fusion.pdf">A Double Projection Approach for Safe and Efficient Semi-Supervised Data-Fusion</a></p>
+<p>*<a href="distrbution_learning.pdf">Genetics- Learning Conditional Density with high-dimensional covariates</a> and its <a href="distribution_learning_ppt.pdf">slide</a></p>
+<p>*<a href="LP__Copy.pdf">A Adaptive Linear Programming For Quantile Regression With Shared Design</a></p>
+<p>*<a href="DL_QR_for_all.pdf">A neural network approach for large-scale imputation for data with informative missingness by minimizing re-calibrated Wasserstein distance</a></p>
 <h1 style="text-align:right">
 Contact Me
 </h1>
@@ -377,10 +379,10 @@ Yiming LI
 917-294-9193
 </p>
 <p align="right">
-100 Haven Ave, NY
+2022 Central Rd, NJ
 </p>
 <p align="right">
-NY, 10032
+NJ, 07024
 </p>
 <p align="right">
 Email: <a href="mailto:yl4925@cumc.columbia.edu" class="email">yl4925@cumc.columbia.edu</a>

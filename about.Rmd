@@ -6,10 +6,20 @@ output:
     toc_float: true
 ---
 
-# this page is information about me.
+I hope to include more personal information about me. 
 
-My Name is Yiming Li. I'm currently a first year master student at [Columbia University in the City of New York](https://www.columbia.edu/), mailman school of public health. My department is biostatistics. I finished my undergraduate study in [Fudan university](https://www.fudan.edu.cn/en/), Shanghai, China with bachelors degree of mathematics. 
+# Resume
 
-I have a strong interest in data analysis using mathematics methods such as PCA, SVM. And I also want to study deep learning and machine learning.
+First is my [resume](resume.pdf).
 
-More details about my experience can be found in my [resume](resume.pdf)
+# Photo?
+
+Maybe Later. 
+
+# Favorite Animation.
+
+It must be Grand Blue.
+
+![](images/grand blue.jpg)
+
+
